@@ -1,0 +1,8 @@
+{
+  "runSca": {
+    "scaId": "MOCK-SCA-1",
+    "reason": "payment",
+    "methods": ["biometric", "devicePin"],
+    "amount": { "amount": 499900, "currency": "INR" }
+  }
+}

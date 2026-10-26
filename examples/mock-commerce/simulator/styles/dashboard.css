@@ -1,0 +1,225 @@
+/* Merchant dashboard, styled like shop.breeze.in (ostia theme tokens). */
+
+body {
+  background: linear-gradient(180deg, #faf7ff 0%, var(--breeze-bg) 320px);
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--breeze-primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heading {
+  margin: 4px 0;
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--breeze-primary), #c026d3);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.lead {
+  margin: 0 0 24px;
+  color: var(--breeze-text-muted);
+  font-size: 0.9rem;
+}
+
+.card {
+  margin-bottom: 16px;
+  padding: 20px;
+  border: 1px solid #ece9f5;
+  border-radius: 20px;
+  background: var(--breeze-bg);
+  box-shadow: 0 2px 12px rgba(139, 92, 246, 0.06);
+}
+
+.card-heading {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.count {
+  color: var(--breeze-text-muted);
+  font-weight: 400;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: block;
+  color: var(--breeze-text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.field.wide {
+  grid-column: 1 / -1;
+}
+
+.input {
+  width: 100%;
+  margin-top: 4px;
+  padding: 12px 16px;
+  border: 1.5px solid var(--breeze-border-light);
+  border-radius: var(--breeze-radius-pill);
+  box-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.06),
+    0 1px 4px rgba(0, 0, 0, 0.03);
+  color: #2d2d3a;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--breeze-text-faint);
+}
+
+.input:focus {
+  border-color: var(--breeze-primary-ring);
+}
+
+.primary-button,
+.secondary-button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: var(--breeze-radius-pill);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.primary-button {
+  background: var(--breeze-primary);
+  color: #ffffff;
+}
+
+.primary-button:hover {
+  background: var(--breeze-primary-dark);
+}
+
+.secondary-button {
+  margin-top: 16px;
+  background: var(--breeze-primary-light);
+  color: var(--breeze-primary-dark);
+}
+
+.secondary-button:hover {
+  background: var(--breeze-primary-subtle);
+}
+
+.error {
+  min-height: 18px;
+  margin: 8px 0;
+  color: var(--breeze-error-text);
+  font-size: 0.8rem;
+}
+
+.note {
+  margin: 12px 0 0;
+  color: var(--breeze-text-muted);
+  font-size: 0.75rem;
+}
+
+.empty {
+  margin: 0;
+  color: var(--breeze-text-muted);
+  font-size: 0.875rem;
+}
+
+.product-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.product-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ece9f5;
+}
+
+.product-row:last-child {
+  border-bottom: none;
+}
+
+.row-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--breeze-radius-md);
+  overflow: hidden;
+  background: var(--breeze-bg-subtle);
+}
+
+.row-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.row-image img.placeholder-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.row-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.row-name {
+  margin: 0;
+  overflow: hidden;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.row-meta {
+  margin: 2px 0 0;
+  color: var(--breeze-text-muted);
+  font-size: 0.75rem;
+}
+
+.row-link {
+  margin-left: 8px;
+  color: var(--breeze-primary-dark);
+}
+
+.remove-button {
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  color: var(--breeze-text-muted);
+}
+
+.remove-button:hover {
+  color: var(--breeze-error-text);
+}
+
+@media (max-width: 480px) {
+  .fields {
+    grid-template-columns: 1fr;
+  }
+}

@@ -3,6 +3,10 @@ name: Release and Publish
 on:
   push:
     branches: [release]
+    paths-ignore:
+      - 'examples/**'
+      - 'docs/guide/**'
+      - 'docs/specs/**'
 
 jobs:
   release:

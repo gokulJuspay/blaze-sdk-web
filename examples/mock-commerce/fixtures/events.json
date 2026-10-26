@@ -1,0 +1,42 @@
+{
+  "search": {
+    "event": "SearchViewed",
+    "eventData": { "query": "running shoes", "resultCount": 24 }
+  },
+  "product": {
+    "event": "ProductViewed",
+    "eventData": {
+      "productId": "MOCK-SKU-1",
+      "name": "Mock Runner 2",
+      "price": { "amount": 499900, "currency": "INR" }
+    }
+  },
+  "cart": {
+    "event": "CartViewed",
+    "eventData": {
+      "cartId": "MOCK-CART-1",
+      "itemCount": 1,
+      "total": { "amount": 499900, "currency": "INR" }
+    }
+  },
+  "checkout": {
+    "event": "CheckoutStarted",
+    "eventData": { "cartId": "MOCK-CART-1", "total": { "amount": 499900, "currency": "INR" } }
+  },
+  "address": {
+    "event": "AddressSelected",
+    "eventData": { "addressId": "MOCK-ADDR-1", "postalCode": "560001", "country": "IN" }
+  },
+  "confirm": {
+    "event": "OrderReviewed",
+    "eventData": { "cartId": "MOCK-CART-1", "total": { "amount": 499900, "currency": "INR" } }
+  },
+  "pay": {
+    "event": "PaymentStarted",
+    "eventData": { "paymentMethod": "card", "amount": { "amount": 499900, "currency": "INR" } }
+  },
+  "done": {
+    "event": "OrderPlaced",
+    "eventData": { "orderId": "MOCK-ORDER-1", "total": { "amount": 499900, "currency": "INR" } }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "completed": {
+    "status": "completed",
+    "orderIds": ["MOCK-ORDER-1"]
+  },
+  "cancelled": {
+    "status": "cancelled",
+    "reason": "userClosed"
+  },
+  "backPressed": {
+    "status": "cancelled",
+    "reason": "backPressed"
+  },
+  "failed": {
+    "status": "failed",
+    "error": true,
+    "errorCode": "MOCK_FAILURE",
+    "errorDetails": "Failure triggered from the journey simulator"
+  },
+  "sessionMissing": {
+    "status": "failed",
+    "error": true,
+    "errorCode": "SESSION_MISSING",
+    "errorDetails": "process launch payload has no sessionToken"
+  },
+  "sessionInvalid": {
+    "status": "failed",
+    "error": true,
+    "errorCode": "SESSION_INVALID",
+    "errorDetails": "Mock Commerce rejected the session token"
+  }
+}

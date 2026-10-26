@@ -1,0 +1,18 @@
+{
+  "name": "blaze-mock-commerce",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Mock Commerce backend and journey simulator for the Blaze native SDK preview (S117.1)",
+  "scripts": {
+    "start": "node server.mjs",
+    "start:https": "node server.mjs --tls-cert keys/dev-cert.pem --tls-key keys/dev-key.pem",
+    "dev": "node --watch server.mjs",
+    "test": "node --test test/server.test.mjs",
+    "typecheck": "pnpm --dir ../.. exec tsc -p examples/mock-commerce/simulator/jsconfig.json",
+    "sign-config": "node sign-config.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
