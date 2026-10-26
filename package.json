@@ -1,6 +1,6 @@
 {
   "name": "@juspay/blaze-sdk-web",
-  "version": "0.5.14",
+  "version": "0.5.15",
   "type": "module",
   "description": "SDK for integrating Breeze 1CCO into your Web Application",
   "keywords": [
