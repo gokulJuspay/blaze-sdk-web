@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blaze Shop Journey Example</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+    />
+  </head>
+
+  <body>
+    <script type="module" src="./src/main.ts"></script>
+    <main id="app">
+      <h1>Shop journey example</h1>
+      <p class="muted">Opens the <code>in.breeze.shop</code> journey on this page.</p>
+
+      <label for="frame-url">Frame URL</label>
+      <div class="frame-url">
+        <select id="frame-url-preset" aria-label="Frame URL preset">
+          <option value="https://shop.beta.breeze.in/sdk">beta</option>
+          <option value="https://shop.breeze.in/sdk">release</option>
+          <option value="http://localhost:5180/sdk">local</option>
+          <option value="">custom</option>
+        </select>
+        <input id="frame-url" type="url" spellcheck="false" />
+      </div>
+
+      <label for="initiate-payload">Initiate payload</label>
+      <textarea id="initiate-payload" rows="9" spellcheck="false"></textarea>
+
+      <label for="process-payload">Launch payload</label>
+      <textarea id="process-payload" rows="8" spellcheck="false"></textarea>
+
+      <p id="error" class="error" hidden></p>
+
+      <div class="buttons">
+        <button class="primary" onclick="window.initiateSDK()">Initiate SDK</button>
+        <button class="primary" onclick="window.processSDK()">Process SDK</button>
+        <button onclick="window.terminateSDK()">Terminate SDK</button>
+        <button onclick="window.resetPayloads()">Reset</button>
+      </div>
+
+      <div class="log-header">
+        <h2>Messages</h2>
+        <button id="clear-log" class="link">Clear</button>
+      </div>
+      <pre id="log"></pre>
+    </main>
+
+    <div id="journey" hidden></div>
+  </body>
+</html>

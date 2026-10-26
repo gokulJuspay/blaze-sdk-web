@@ -1,0 +1,195 @@
+:root {
+  --primary: #8b5cf6;
+  --primary-dark: #7c3aed;
+  --text: #18181b;
+  --text-muted: #71717a;
+  --border: #e4e4e7;
+  --surface: #fafafa;
+  --error: #dc2626;
+
+  font-family: 'Poppins', system-ui, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+}
+
+#app {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+h2 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.muted {
+  margin-top: 0.25rem;
+  color: var(--text-muted);
+}
+
+label {
+  display: block;
+  margin: 1.25rem 0 0.4rem;
+  font-weight: 500;
+}
+
+.frame-url {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.frame-url select {
+  flex: 0 0 8rem;
+}
+
+.frame-url input {
+  flex: 1 1 18rem;
+  min-width: 0;
+}
+
+.frame-url input,
+.frame-url select {
+  height: 3.125rem;
+}
+
+@media (max-width: 480px) {
+  .frame-url select {
+    flex-basis: 100%;
+  }
+}
+
+.log-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0 0.5rem;
+}
+
+.log-header h2 {
+  margin: 0;
+}
+
+button.link {
+  border: 0;
+  padding: 0.25rem 0.5rem;
+  color: var(--primary);
+  background: none;
+}
+
+button.link:hover {
+  color: var(--primary-dark);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.75rem;
+  font: inherit;
+  color: var(--text);
+  background: #ffffff;
+}
+
+select {
+  appearance: none;
+  padding-right: 2.25rem;
+  background: #ffffff
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%2371717a' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M1 1.5 6 6.5l5-5'/%3E%3C/svg%3E")
+    no-repeat right 0.9rem center;
+  cursor: pointer;
+}
+
+#frame-url,
+textarea,
+pre,
+code {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.85rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #c4b5fd;
+  border-color: var(--primary);
+}
+
+.error {
+  color: var(--error);
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 0.7rem 1.4rem;
+  font: inherit;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: #ffffff;
+  cursor: pointer;
+}
+
+button.primary {
+  border-color: var(--primary);
+  color: #ffffff;
+  background: var(--primary);
+}
+
+button.primary:hover {
+  background: var(--primary-dark);
+}
+
+pre {
+  max-height: 24rem;
+  overflow: auto;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  white-space: pre-wrap;
+}
+
+#journey {
+  position: fixed;
+  inset: 0 0 0 auto;
+  width: min(440px, 100vw);
+  background: #ffffff;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.12);
+  visibility: hidden;
+}
+
+#journey.open {
+  visibility: visible;
+}
+
+#journey iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
